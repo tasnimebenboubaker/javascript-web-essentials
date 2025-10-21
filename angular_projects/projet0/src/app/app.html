@@ -1,0 +1,14 @@
+<app-welcome></app-welcome>
+<app-product></app-product>
+<app-user></app-user>
+<app-basket></app-basket>
+
+<h1>Bienvenue sur la boutique</h1>
+
+<!-- Écoute de l'événement émis par le composant enfant -->
+<app-product (ajoutPanier)="onProduitAjoute($event)"></app-product>
+
+<!-- Affichage du message reçu -->
+<p *ngIf="message" class="text-blue-600 font-semibold mt-4">
+  {{ message }}
+</p>
